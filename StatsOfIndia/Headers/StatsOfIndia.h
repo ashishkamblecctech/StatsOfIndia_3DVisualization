@@ -1,7 +1,6 @@
 #pragma once
 
 #include "OpenGLWindow.h"
-
 #include <QtCore/QVariant>
 #include <QtOpenGLWidgets/QOpenGLWidget>
 #include <QtWidgets/QApplication>
@@ -46,16 +45,6 @@ private:
     QVector<GLfloat> mColors;
 
     std::vector<std::string> stateNames;
-    std::vector<long> statePopulation;
-    std::vector<float> stateEducation;
-    std::vector<float> stateArea;
-
-    std::vector<long> stateActualPopulation;
-    std::vector<float> stateActualEducation;
-    std::vector<float> stateActualArea;
 
     std::vector <RegionInfo1> regions1;
-
-    QStringList stateNames1;
-    QList<long> stateValues1;
 };
