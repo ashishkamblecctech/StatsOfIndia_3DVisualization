@@ -1,9 +1,7 @@
-// StatsDataReader.cpp : Defines the exported functions for the DLL.
 #include "pch.h"
 #include "framework.h"
 #include "StatsDataReader.h"
 
-// This is the constructor of a class that has been exported.
 StatsDataReader::StatsDataReader()
 {
     
@@ -12,15 +10,18 @@ StatsDataReader::StatsDataReader()
 StatsDataReader::~StatsDataReader()
 {}
 
-void StatsDataReader::dataReader(std::vector <std::string>& stateNames, std::vector<long>& statePopulation, 
-                                        std::vector<float>& stateEducation, std::vector<float>& stateArea, std::vector<long>& stateActualPopulation,
-                                         std::vector<float>& stateActualEducation, std::vector<float>& stateActualArea, std::vector <RegionInfo1>& region1)
+void StatsDataReader::dataReader(std::vector <std::string>& stateNames, std::vector <RegionInfo1>& region1)
 {
+    statePopulation.resize(31);
+    stateEducation.resize(31);
+    stateArea.resize(31);
+
+    //Storing statenames in the vector
     stateNames = { "Andra Pradesh", "Arunachal Pradesh","Assam","Bengal","Bihar", "Chattisgarh", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir",
                    "Jharkhand", "Karnatak", "Kerala", "Ladakh", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalay", "Mizoram", "Nagaland", "Odisha", "Punjab",
                    "Rajastan", "Sikkim", "Tamilnadu", "Telangana", "Tripura", "Uttarakhand", "UttarPradesh" };
 
-    stateActualPopulation = {
+    statePopulation = {
         //The population data is upto 2022
 
             54000000,  // Andra Pradesh
@@ -56,12 +57,7 @@ void StatsDataReader::dataReader(std::vector <std::string>& stateNames, std::vec
            230000000  // UttarPradesh
     };
 
-    for (size_t i=0; i< stateActualPopulation.size(); i++)
-    {
-        statePopulation[i] = (stateActualPopulation[i] / 10000000);
-    }
-
-    stateActualEducation = { 
+    stateEducation = { 
         //The data is upto 2022
         
         74.3,   // Andra Pradesh
@@ -97,12 +93,7 @@ void StatsDataReader::dataReader(std::vector <std::string>& stateNames, std::vec
         68.7    // UttarPradesh
     };
 
-    for (size_t i = 0; i < stateActualEducation.size(); i++)
-    {
-        stateEducation[i] = (stateActualEducation[i] - 60)/2;
-    }
-
-    stateActualArea = { 
+    stateArea = { 
     //The data is upto 2022
     
         160205,   // Andra Pradesh (in square kilometers)
@@ -139,11 +130,7 @@ void StatsDataReader::dataReader(std::vector <std::string>& stateNames, std::vec
     
     };
 
-    for (size_t i = 0; i < stateActualArea.size(); i++)
-    {
-        stateArea[i] = (stateActualArea[i] / 20000);
-    }
-
+    //Storing all the data in single vector of datatype RegionInfo1 which is struct declared in the .h file
     region1 = {
             {"Resources/andraPradesh.txt",1.0, 0.5, 1.0, statePopulation[0], stateEducation[0], stateArea[0]},
             {"Resources/arunachalPradesh.txt", 1.0, 0.5, 0.5, statePopulation[1], stateEducation[1], stateArea[1]},
@@ -179,5 +166,4 @@ void StatsDataReader::dataReader(std::vector <std::string>& stateNames, std::vec
             {"Resources/uttarakhand.txt", 0.5, 1.0, 1.0, statePopulation[29], stateEducation[29], stateArea[29]},
             {"Resources/uttarPradesh.txt", 0.0, 1.0, 0.5, statePopulation[30], stateEducation[30], stateArea[30]},
     };
- 
 }
