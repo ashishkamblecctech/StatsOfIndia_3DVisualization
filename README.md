@@ -43,4 +43,11 @@ The StatsOfIndia Visualization Project is a C++ project that utilizes Qt and Ope
 ## Output Video
 https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/95d70a95-10ca-4da3-be13-4ecc637a2102
 
+## Doxygen Files:
+![geometry_doxygen](https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/47fd21a5-1373-4e31-b102-00aabad81850)
 
+![StatsDataReader_doxygen](https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/13095d9c-0298-4d31-b648-11c63541911a)
+
+![OpenGL_doxygen](https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/52d222d6-7130-491a-ab53-07b5eaed2e13)
+
+![StatsOfIndia_doxygen](https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/2b6cd7c2-06e1-4e07-bccf-86054fa0332b)
