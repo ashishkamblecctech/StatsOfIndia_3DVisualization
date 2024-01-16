@@ -50,4 +50,5 @@ https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309
 
 ![OpenGL_doxygen](https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/52d222d6-7130-491a-ab53-07b5eaed2e13)
 
-![StatsOfIndia_doxygen](https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/2b6cd7c2-06e1-4e07-bccf-86054fa0332b)
+![StatsOfIndia_doxygen](https://github.com/ashishkamblecctech/StatsOfIndia_3DVisualization/assets/149309502/59c4f964-f817-40f3-a467-e9d23867254b)
+
